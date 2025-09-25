@@ -36,6 +36,19 @@ Start by running the blink.py file! When you run it, your Pi Pico's LED should s
 ## Getting your servos & motors to move
 We recommend you look through the elec slides before this section so you understand the basic concepts of wiring, breadboards, and pins.
 
+### Understanding the software definition of a Pin:
+So we know that a pin in the elec sense is the literal pin that comes out of the raspberry pi pico that we can connect wires to, but a pin in software is a little different, mainly in how they are indexed. Below is an image of a Pi Pico's pinout (list of all pins, and what they can do)
+<img width="883" height="857" alt="Pico" src="https://github.com/user-attachments/assets/15f71550-f0d4-4591-98dc-f3299e5b548f" />
 
+As a quick legend, everything that's red is power (in or out of the pico), black is ground (all electrical equipment must be connected to a common ground wire), and everything else is a pin that can send & recieve signals (a string of 1 & 0 bits that pi pico / board interprets as data).
 
+When our code tries to connect to Pin #17 in order to send signals over that pin, we're connecting to the pin on the pi pico with GP pin = 17. NOT THE NUMBERS IN GRAY! It's a little misleading. Those are the physical pin numbers - the software pin numbers are only the GP (green) pins, so their indices are different.
+
+PWM: TODO
+
+Running Servo: TODO
+
+Running Motor: TODO
+
+Above and beyond: TODO
 
